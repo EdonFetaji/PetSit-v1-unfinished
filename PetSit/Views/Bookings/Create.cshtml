@@ -1,0 +1,169 @@
+﻿@using PetSit.Models
+@using Utilities
+@model PetSit.Models.Booking
+
+@{
+    ViewBag.Title = "Create Booking";
+}
+@{
+    var user = Session["user"] as ApplicationUser;
+    var pickedSitter = SessionUtility.GetFlash("PetSitter") as PetSitter;
+}
+
+<main class="flex mt-1" style="background-image: url('@Url.Content("~/Content/images/paw_3.jpg")');">
+    <div class="border-2 shadow-lg rounded-xl m-auto px-16 py-6 my-16 bg-white">
+        <div class="flex flex-col justify-center">
+            <div class="flex">
+                <img class="max-w-[15vw] p-8 m-auto" src="~/Content/images/PetSit.png" alt="PetSit Logo"/>
+            </div>
+
+            <section id="createBookingForm" class="space-y-8">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="text-lg font-bold mb-[1vw]">Create a New Booking</h4>
+                    @Html.ValidationSummary(true, "", new { @class = "text-red-600" })
+
+                    <div class="grid grid-cols-2 gap-x-6">
+                        <div>
+                            <input type="hidden" name="UserID" value="@user.Id"/>
+
+                            <!-- Pet Sitter ID Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet Sitter</label>
+                                <div>
+                                    @if (pickedSitter != null)
+                                    {
+                                        <input id="petSitter" type="hidden" name="PetSitterID" value="@pickedSitter.PetSitterID"/>
+                                        <p class="text-indigo-600 font-bold">@pickedSitter.User.Name (@pickedSitter.location)</p>
+                                    }
+                                    else
+                                    {
+                                        @Html.DropDownList("PetSitterID", new SelectList(ViewBag.sitters, "PetSitterID", "Description"), htmlAttributes: new { @class = "rounded-xl border-2 border-bg-indigo-500 w-full p-1" })
+                                        @Html.ValidationMessageFor(model => model.PetSitterID, "", new { @class = "text-red-600" })
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet</label>
+                                <div>
+                                    <select id="offeredServices" class= "rounded-xl border-2 border-bg-indigo-500 w-full p-1">
+
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.PetID, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- Pet ID Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet</label>
+                                <div>
+                                    @Html.DropDownList("PetID", new SelectList(ViewBag.pets, "PetID", "name"), htmlAttributes: new { @class = "rounded-xl border-2 border-bg-indigo-500 w-full p-1" })
+                                    @Html.ValidationMessageFor(model => model.PetID, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Start Date Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Start Date</label>
+                                <div>
+                                    <input type="text" name="start" id="startDate" value="" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1"/>
+                                    @Html.ValidationMessageFor(model => model.start, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- End Date Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">End Date</label>
+                                <div>
+                                    <input type="text" name="end" id="endDate" value="" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1"/>
+                                    @Html.ValidationMessageFor(model => model.end, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment Field -->
+                        <div class="py-3 col-span-2">
+                            <label class="font-bold text-gray-700">Comment</label>
+                            <div>
+                                @Html.EditorFor(model => model.comment, new { htmlAttributes = new { @class = "rounded-xl border-2 border-bg-indigo-500 w-full p-1" } })
+                                @Html.ValidationMessageFor(model => model.comment, "", new { @class = "text-red-600" })
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex items-center justify-center col-span-2 my-5 space-y-2">
+                            <div class="w-full py-1 bg-blue-500 rounded-xl text-white font-bold text-center m-auto">
+                                <input type="submit" value="Create Booking" class="btn btn-outline-dark"/>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</main>
+
+<script>
+    $(function () {
+        var minDate = new Date();
+        var maxDate = null;
+
+        $("#startDate").datepicker({
+            dateFormat: "dd.mm.yy",
+            minDate: minDate,
+            onSelect: function (dateText) {
+                minDate = $(this).datepicker("getDate");
+                $("#endDate").datepicker("option", "minDate", minDate);
+            }
+        });
+
+        $("#endDate").datepicker({
+            dateFormat: "dd.mm.yy",
+            onSelect: function (dateText) {
+                maxDate = $(this).datepicker("getDate");
+                $("#startDate").datepicker("option", "maxDate", maxDate);
+            }
+        });
+       
+        $("#PetSitterID").change(function () {
+            var petSitterId = $(this).val();
+            
+            if (petSitterId) {
+                $.ajax({
+                    url: 'https://localhost:44304/Bookings/GetSitterServices/' + petSitterId, // Correct URL
+                    type: 'GET',
+                    success: function (response) {
+                        if (response.success) {
+                            var services = response.services;
+                            console.log(response.services); 
+                            $("#offeredServices").empty()
+                            $.each(services, function (i, el) {
+                                
+                                if (el !== null) {
+                                    var el = `<option value="${el.name}"> ${el.name}, ${el.price}</option>`
+                                    $("#offeredServices").append(el);
+                                }
+                              
+                            });
+                           
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function () {
+                        alert("Error fetching PetSitter details.");
+                    }
+                });
+            }
+        });
+    });
+
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

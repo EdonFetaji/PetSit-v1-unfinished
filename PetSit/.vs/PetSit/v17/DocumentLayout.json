@@ -1,0 +1,297 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fetaj\\source\\repos\\PetSit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|c:\\users\\fetaj\\source\\repos\\petsit\\views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\bookings\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\controllers\\petsitterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:controllers\\petsitterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\bookings\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\views\\bookings\\_booking-card.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\bookings\\_booking-card.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/aspnet_PetSit_20240912102532/True/SqlTable/dbo.AspNetUserRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:css\\jquery-ui.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:css\\jquery-ui.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\utilities\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:utilities\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|C:\\Users\\fetaj\\source\\repos\\PetSit\\models\\petsitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79D0649D-CA72-4396-A5F2-0DD3EA2B6ACD}|PetSit.csproj|solutionrelative:models\\petsitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "jquery-ui.css",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.css",
+              "RelativeDocumentMoniker": "css\\jquery-ui.css",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.css",
+              "RelativeToolTip": "css\\jquery-ui.css",
+              "ViewState": "AQIAACgBAAAAAAAAAAD4vzsBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-16T14:39:51.272Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.AspNetUserRoles [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/aspnet_PetSit_20240912102532/True/SqlTable/dbo.AspNetUserRoles.sql",
+              "ToolTip": "dbo.AspNetUserRoles [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-16T18:45:51.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "Models\\Service.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\Service.cs",
+              "RelativeToolTip": "Models\\Service.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:43:49.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T17:50:19.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\Booking.cs",
+              "RelativeToolTip": "Models\\Booking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T14:55:27.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "jquery-ui.min.css",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.min.css",
+              "RelativeDocumentMoniker": "css\\jquery-ui.min.css",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\css\\jquery-ui.min.css",
+              "RelativeToolTip": "css\\jquery-ui.min.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAxbgAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-16T14:37:18.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAABEAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T14:34:58.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Create.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\Create.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Create.cshtml",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAuwJ4AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T14:24:21.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Session.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Utilities\\Session.cs",
+              "RelativeDocumentMoniker": "Utilities\\Session.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Utilities\\Session.cs",
+              "RelativeToolTip": "Utilities\\Session.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T14:16:45.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T14:09:25.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T14:02:56.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\BookingsController.cs*",
+              "RelativeToolTip": "Controllers\\BookingsController.cs*",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAAwHcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T14:01:41.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\Index.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\Index.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T13:56:21.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_booking-card.cshtml",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\_booking-card.cshtml",
+              "RelativeDocumentMoniker": "Views\\Bookings\\_booking-card.cshtml",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Views\\Bookings\\_booking-card.cshtml",
+              "RelativeToolTip": "Views\\Bookings\\_booking-card.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T13:54:27.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PetSitter.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\PetSitter.cs",
+              "RelativeDocumentMoniker": "Models\\PetSitter.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Models\\PetSitter.cs",
+              "RelativeToolTip": "Models\\PetSitter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T12:28:08.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PetSittersController.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\PetSittersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PetSittersController.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\PetSittersController.cs",
+              "RelativeToolTip": "Controllers\\PetSittersController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA+wFYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T12:17:12.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\fetaj\\source\\repos\\PetSit\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AQIAAFsBAAAAAAAAAAAAAMUBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T12:14:22.846Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

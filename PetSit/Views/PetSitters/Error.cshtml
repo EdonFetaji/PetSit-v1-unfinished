@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+}
+
+<div>
+    <h2 class="text-4xl font-bold text-red-600">
+        @ViewBag.Message
+    </h2>
+    
+    <button class=" text-black font-bold rounded-xl border-2  px-3 py-1">
+        @Html.ActionLink("Back","Index","Home")
+    </button>
+
+</div>

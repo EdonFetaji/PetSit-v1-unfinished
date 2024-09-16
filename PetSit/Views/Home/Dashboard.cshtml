@@ -1,0 +1,51 @@
+﻿
+@model PetSit.Models.ApplicationUser
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<main class="container">
+    <h2>Welcome to Your Dashboard, @Model.Name</h2>
+
+    <!-- Section: Your Pets -->
+    <section>
+        <h3>Your Pets</h3>
+        @if (Model.Pets != null && Model.Pets.Count > 0)
+        {
+            <table border="1" cellpadding="5" cellspacing="0" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Age</th>
+                    <th>Medical Info</th>
+                    <th>Bio</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var pet in Model.Pets)
+                {
+                    <tr>
+                        <td>@pet.name</td>
+                        <td>@pet.type</td>
+                        <td>@pet.age</td>
+                        <td>@pet.medicalInfo</td>
+                        <td>@pet.bio</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>You have not registered any pets yet.</p>
+        }
+    </section>
+
+    <!-- Section: Your Bookings -->
+
+    <a href="/Pets/RegisterPet">Register a pet</a> <br/>
+
+    <a href="/PetSitters/RegisterSitter">Register as a petsitter </a>
+
+</main>

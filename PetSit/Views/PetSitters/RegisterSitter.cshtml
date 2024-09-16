@@ -1,0 +1,161 @@
+﻿@model PetSit.Models.PetSitter
+@using Newtonsoft.Json;
+@{
+    ViewBag.Title = "Register Pet Sitter";
+}
+
+<main class="flex mt-1" style="background-image: url('@Url.Content("~/Content/images/paw_3.jpg")');">
+    <div class="border-2  border-bg-black  shadow-lg rounded-xl m-auto px-24 py-6 mt-16 bg-white">
+        <div class="flex flex-col justify-center">
+            <div>
+                <img class="max-w-[15vw] p-8" src="~/Content/images/PetSit.png" alt="PetSit Logo"/>
+            </div>
+
+            @{
+                List<PetSit.Models.Service> services = new List<PetSit.Models.Service>
+                {
+                    new PetSit.Models.Service(
+                        name: "Overnight Pet Sitting",
+                        desc: "A pet sitter stays overnight at your home to take care of your pet, providing companionship and ensuring they are fed, exercised, and comfortable.",
+                        pr: 1000
+                    ),
+                    new PetSit.Models.Service(
+                        name: "Daily Pet Visits",
+                        desc: "The pet sitter visits your home once or twice a day to feed, walk, and spend time with your pet, ensuring they are happy and cared for while you're away.",
+                        pr: 800
+                    ),
+                    new PetSit.Models.Service(
+                        name: "Dog Walking",
+                        desc: "A service where the pet sitter takes your dog for a walk, ensuring they get the necessary exercise and attention while you're busy or away.",
+                        pr: 600
+                    ),
+                    new PetSit.Models.Service(
+                        name: "Pet Grooming",
+                        desc: "Grooming services include bathing, brushing, nail trimming, and ear cleaning to ensure your pet stays clean and well-groomed.",
+                        pr: 700
+                    ),
+                    new PetSit.Models.Service(
+                        name: "Pet Boarding",
+                        desc: "The pet sitter takes care of your pet at their own home for an extended period, providing food, shelter, and companionship while you're on vacation or away for work.",
+                        pr: 3000
+                    )
+                };
+            }
+
+            <section id="registerForm" class="space-y-8">
+                @using (Html.BeginForm("RegisterSitter", "PetSitters", FormMethod.Post, new { enctype = "multipart/form-data", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="text-lg font-bold mb-[1vw]">Register as a Pet Sitter</h4>
+                    @Html.ValidationSummary(true, "", new { @class = "text-red-600" })
+
+                    <!-- Offered PetSit.Models.Services Field -->
+                    <div class="py-3">
+                        <label>Offered Services: </label>
+                        <div class="border-2 rounded-xl border-bg-indigo-600 p-10">
+                            <h2 class="text-lg text-center font-bold my-5 ">Pick the services you can provide!</h2>
+                            <div id="services" class="flex flex-wrap justify-start space-x-4 space-y-2 max-w-[18vw]">
+                                @foreach (var s in services)
+                                {
+                                    <div class="p-1 border-2 rounded-xl serviceItem flex flex-wrap" data-service='@JsonConvert.SerializeObject(s)'>
+                                        @s.name
+                                    </div>
+                                }
+                            </div>
+
+                            <div id="selectedServices" class="rounded-xl border-2 border-indigo-500 w-full p-6 m-2">
+                                <p id="hint" class="text-gray-500">Drop the services here !</p>
+
+                            </div>
+
+                            <!-- Hidden field to store the selected services -->
+                            <input class="hidden" type="text" id="offeredServicesTarget" name="offeredServices"/>
+                        </div>
+                    </div>
+
+                    <!-- Availability Field -->
+                    <div class="py-3">
+                        @Html.LabelFor(m => m.availability, new { @class = "col-md-2 col-form-label" })
+                        <select class="rounded-xl border-2 border-indigo-500 w-full p-1" name="availability">
+                            <option>Week Days</option>
+                            <option>Weekends</option>
+                            <option>At all Times</option>
+                            <option>Inquiry based</option>
+                        </select>
+                    </div>
+
+                    <!-- Location Field -->
+                    <div class="py-3">
+                        @Html.LabelFor(m => m.location, new { @class = "col-md-2 col-form-label" })
+                        <div class="col-md-10">
+                            <input type="text" name="location" value="" class="rounded-xl border-2 border-indigo-500 w-full p-1" placeholder="Enter your city or address"/>
+                            @Html.ValidationMessageFor(m => m.location, "", new { @class = "text-red-600" })
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center flex-col my-5 space-y-2">
+                        <div class="w-full py-1 bg-blue-500 rounded-xl text-white font-bold text-center m-auto">
+                            <input type="submit" value="Register" class="btn btn-outline-dark"/>
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+    <script>
+
+        function checkElements(el) {
+        }
+
+        $(document).ready(function () {
+            // Make the services sortable between the two divs
+            $("#services").sortable({
+                connectWith: "#selectedServices"
+            });
+
+            $("#selectedServices").sortable({
+                connectWith: "#services",
+                receive: function () {
+                    var n = $(this).children().length;
+                    console.log(n);
+                    if (n > 1) {
+                        $("#hint").hide()
+                    } else {
+                        $("#hint").show()
+                    }
+                },
+                remove: function (event, ui) {
+                    var n = $(this).children().length;
+                    console.log(n);
+                    if (n > 1) {
+                        $("#hint").hide()
+                    } else {
+                        $("#hint").show()
+                    }
+                },
+            });
+
+            // On form submission, collect the selected services and store in hidden input field
+            $("#registerForm").on("submit", function (e) {
+                var selectedServices = "[";
+                var items = $("#selectedServices").children();
+                $.each(items, function (i, el) {
+
+                    var s = el.dataset.service;
+                    if (i !== items.length) {
+                        s += ","
+                    }
+                    selectedServices += s;
+                });
+                selectedServices += "]";
+                $("#offeredServicesTarget").val(selectedServices);
+
+            });
+        });
+    </script>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

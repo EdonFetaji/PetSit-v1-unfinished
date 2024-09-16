@@ -1,0 +1,38 @@
+﻿@model PetSit.Models.Booking
+
+<div class="flex items-center bg-gray-100 p-4 rounded-lg shadow-md w-full group m-auto max-w-[100%]">
+    <div>
+        <img class="w-[150px] h-[60%] object-cover rounded-xl" src="@Url.Content(Model.PetSitter.User.ProfilePicturePath ?? "~/Content/PetProfilePictures/placeholder.jpg")" alt="@Model.PetSitter.User.Name">
+    </div>
+
+    <div class="ml-4 w-2/3 p-4 flex flex-col h-full justify-between">
+        <h3 class="text-2xl font-bold text-gray-700 mb-3"> Pet Sitter: 
+            <span class="text-[#32CD32]">@Model.PetSitter.User.Name</span>
+        </h3>
+        
+        <div>
+            <p class="text-xl text-gray-500 font-bold"> Where: 
+                <span class="text-[#32CD32]">@Model.PetSitter.location</span>
+            </p>
+            <p class="text-xl text-gray-600 font-bold">Check In Date: 
+                <span class="text-[#32CD32]">@Model.start.ToString("dd.MM.yyyy")</span>
+            </p>
+        </div>
+      
+        <p class="text-lg text-gray-500">Check-in time: 
+            <span class="text-[#32CD32]">@Model.start.AddHours(-16).ToString("HH:mm")</span>
+        </p>
+    </div>
+
+    <div class="ml-auto text-gray-400">
+        @{
+            var str = "/Bookings/Details/" + Model.BookingID;
+        }
+
+        <a href="@str" class="group-hover:scale-125">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-200 transform group-hover:scale-150 group-hover:text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </a>
+    </div>
+</div>

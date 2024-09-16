@@ -1,0 +1,53 @@
+﻿@model PagedList.IPagedList<PetSit.Models.Booking>
+@using PagedList.Mvc;
+@using PetSit.Models
+@{
+    ViewBag.Title = "Booking List";
+}
+
+<div class="container m-auto mt-8">
+    @* <h2 class="text-2xl font-bold mb-6">Bookings</h2> *@
+    
+    <div class="flex justify-start space-x-5 items-center pb-7">
+        <img class="w-[30px]" src="~/Content/images/logo.png" />
+        <h1 class="text-brown-700 text-2xl font-bold">Bookings</h1>
+    </div>
+
+    <div class=" w-full grid grid-cols-2 gap-3 place-items-center">
+        @if (Model != null && Model.Count > 0)
+        {
+            foreach (var booking in Model)
+            {
+                // Render each booking using the partial view "_BookingCard"
+
+                
+                    @Html.Partial("_booking-card", booking)
+          
+            }
+        }
+        else
+        {
+            <p class="text-gray-600">No bookings found.</p>
+        }
+    </div>
+
+    <!-- Pagination controls -->
+    <div class="mt-8 flex justify-center">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), 
+            new PagedListRenderOptions
+            {
+                DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+                DisplayLinkToLastPage = PagedListDisplayMode.Always,
+                DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                MaximumPageNumbersToDisplay = 5,
+                UlElementClasses = new[] { "pagination", "flex", "space-x-2" },
+                LiElementClasses = new[] { "page-item" },
+               
+            })
+
+    </div>
+    <div class="px-5 py-2 text-center text-white bg-blue-500 hover:bg-blue-700 hover:scale-110 transition-transform duration-200 rounded-xl w-[15vw]">
+        @Html.ActionLink("Make a new Booking","Create")
+    </div>
+</div>

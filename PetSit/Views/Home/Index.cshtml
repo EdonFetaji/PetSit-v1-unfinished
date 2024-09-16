@@ -1,0 +1,101 @@
+﻿@{
+    @model List<PetSit.Models.PetSitter>
+    ViewBag.Title = "Home Page";
+}
+
+<main class="flex flex-col space-y-24">
+    <section class="bg-cover bg-center rounded-2xl m-auto w-[90%] h-[250px] flex flex-col items-center justify-center pt-[8vw] space-y-12 mt-[15px] " style="background-image: url('@Url.Content("~/Content/images/header.png")'); background-size:cover;">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-white">Find a place for your pet at PetSit</h1>
+            <h2 class="text-xl text-white ">10,000+ sitters available for your furry friends!</h2>
+        </div>
+
+        <form id="searchbar" method="post" class="flex items-center justify-center px-3 py-2 bg-[#D3D3D3] rounded-full w-[65%] focus:outline-black focus:ring-2 focus:ring-indigo-500 focus:ring-offset-4">
+            <input type="text" name="name" value="" class="flex-1 h-full text-indigo-600 pl-5 rounded-full bg-[#D3D3D3] focus:outline-none focus:ring-0" placeholder="Search by Location, Service, Petsitter name ..." />
+            <button type="submit">
+                <img class="h-[50px]" src="~/Content/images/arrow.png" alt="Alternate Text" />
+            </button>
+        </form>
+    </section>
+
+    <section>
+        <div class="flex justify-start space-x-5 items-center pb-7">
+            <img class="w-[30px]" src="~/Content/images/logo.png" />
+            <h1 class="text-brown-700 text-2xl font-bold">Popular pet-friendly locations</h1>
+        </div>
+
+        <div id="content" class="grid grid-cols-4 gap-3">
+            <div class="relative group">
+                <img class="h-[460px] w-full object-cover rounded-xl" src="~/Content/images/places/beach.jpeg" alt="Beach" />
+                <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">Beach</span>
+            </div>
+
+            <div class="grid gap-3">
+                <div class="relative group ">
+                    <img class="h-[225px] w-full object-cover rounded-xl" src="~/Content/images/places/city.jpeg" alt="City" />
+                    <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">City</span>
+                </div>
+                <div class="relative group">
+                    <img class="h-[225px] w-full object-cover rounded-xl" src="~/Content/images/places/park.jpeg" alt="Park" />
+                    <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">Park</span>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <img class="h-[460px] w-full object-cover rounded-xl" src="~/Content/images/places/forest.jpeg" alt="Forest" />
+                <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">Forest</span>
+            </div>
+
+            <div class="grid gap-3">
+                <div class="relative group">
+                    <img class="h-[225px] w-full object-cover rounded-xl" src="~/Content/images/places/garden.jpeg" alt="Garden" />
+                    <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">Garden</span>
+                </div>
+                <div class="relative group">
+                    <img class="h-[225px] w-full object-cover rounded-xl" src="~/Content/images/places/home.jpeg" alt="Home" />
+                    <span class="absolute bottom-4 left-4 text-white text-lg font-bold bg-black bg-opacity-50 px-3 py-1 rounded-xl group-hover:bg-opacity-75">Home</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="flex justify-start space-x-5 items-center pb-7">
+            <img class="w-[30px]" src="~/Content/images/logo.png" />
+            <h1 class="text-brown-700 text-2xl font-bold">Top Rated PetSitters</h1>
+        </div>
+
+        <div id="content">
+
+            @*@foreach(var sitter in Model)
+            {
+                <div class="">
+                    <div class="relative">
+                        <img src="@sitter.User.ProfilePicturePath" alt="Alternate Text" />
+                    </div>
+                    @if (sitter.rating >= 4.2)
+                    {
+                        <div>
+                            <img src="~/Content/images/star.png" alt="Alternate Text" />
+                        </div>
+                    }
+
+                </div>
+            }*@
+        </div>
+
+    </section>
+
+    <div class="flex items-center justify-between w-full space-x-5 rounded-xl bg-[#93877e] bg-opacity-35 px-8 py-6">
+        <img class="w-[70px]" src="~/Content/images/dogIcon.png" alt="Alternate Text" />
+        <div>
+            <h3 class="text-2xl font-bold">Best deals for your furry friends!</h3>
+            <p class="text-lg">Want exclusive offers for your pets? Sign up now to receive special deals and updates!</p>
+        </div>
+        <button class="flex-1 m-auto text-right ">
+            <a class="rounded-xl bg-black text-white text-bold px-14 py-3">Sign up now</a>
+        </button>
+
+    </div>
+</main>

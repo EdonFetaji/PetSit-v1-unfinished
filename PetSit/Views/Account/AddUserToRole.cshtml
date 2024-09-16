@@ -1,0 +1,19 @@
+﻿@model PetSit.Models.AddToRoleModel;
+@{
+    ViewBag.Title = "AddUserToRole";
+}
+
+@using (Html.BeginForm("AddUserToRole", "Account"))
+{
+    @Html.LabelFor(m => m.Email)
+
+    <div class="form-group">
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    </div>
+
+    @Html.DropDownListFor(m => m.selectedRole, new SelectList(Model.Roles), new { @class = "form-control" })
+
+    <button class="btn btn-primary">
+        Add role
+    </button>
+}

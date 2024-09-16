@@ -1,0 +1,69 @@
+﻿@using PetSit.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<main class="flex mt-1" style="background-image: url('@Url.Content("~/Content/images/paw_3.jpg")'); ">
+    <div class="border-2 shadow-lg rounded-xl m-auto px-16 py-6 mt-16 bg-white">
+        <div class="flex flex-col jusify-center">
+            <div>
+                <img class="max-w-[15vw] p-8" src="~/Content/images/PetSit.png" alt="Alternate Text" />
+            </div>
+
+            <section id="loginForm" class="space-y-8">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="text-lg font-bold mb-[1vw]">Log in to PetSit</h4>
+                    @Html.ValidationSummary(true, "", new { @class = "text-red-600" })
+
+                    <!-- Email Field -->
+                    <div class="py-3">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
+                        <div class="col-md-10">
+                            <input type="text" name="Email" value="" class="rounded-xl border-2 border-bg-indigo-700 w-full p-1" />
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-red-600" })
+                        </div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="py-3">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 col-form-label" })
+                        <div class="col-md-10">
+                            <input type="password" name="Password" value="" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" />
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-red-600" })
+                        </div>
+                    </div>
+
+                    <!-- Remember Me Checkbox -->
+                    <div class="py-2">
+                        <div class="offset-md-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center flex-col my-5 space-y-2">
+                        <div class="w-full py-1 bg-blue-500 rounded-xl text-white font-bold text-center m-auto">
+                            <input type="submit" value="Log in" class="btn btn-outline-dark" />
+                        </div>
+                        <hr class="h-[2px]" />
+                        <span class="text-center">Or</span>
+
+                        <p class="px-4 py-1 bg-green-500 w-full rounded-xl text-white font-bold text-center m-auto">
+                            @Html.ActionLink("Register", "Register")
+                        </p>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

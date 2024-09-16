@@ -1,0 +1,97 @@
+﻿@model PetSit.Models.PetViewModel
+
+@{
+    ViewBag.Title = "Register Pet";
+}
+
+<main class="flex mt-1" style="background-image: url('@Url.Content("~/Content/images/paw_3.jpg")');">
+    <div class="border-2 shadow-lg rounded-xl m-auto px-16 py-6 my-16 bg-white">
+        <div class="flex flex-col justify-center">
+            <div class="flex">
+                <img class="max-w-[15vw] p-8 m-auto" src="~/Content/images/PetSit.png" alt="PetSit Logo" />
+            </div>
+
+            <section id="registerPetForm" class="space-y-8">
+                @using (Html.BeginForm("RegisterPet", "Pets", FormMethod.Post, new { enctype = "multipart/form-data", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="text-lg font-bold mb-[1vw]">Register Your Pet</h4>
+                    @Html.ValidationSummary(true, "", new { @class = "text-red-600" })
+
+                    <!-- Grid Layout for Form Fields -->
+                    <div class="grid grid-cols-2 gap-x-6">
+
+                        <div>
+                            <!-- Pet Name Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet's Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="Name" value="@Model.Name" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" placeholder="Enter your pet's name" />
+                                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- Pet Type Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet's Type</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="Type" value="@Model.Type" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" placeholder="E.g., Dog, Cat" />
+                                    @Html.ValidationMessageFor(m => m.Type, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- Pet Bio Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet's Bio</label>
+                                <div class="col-md-10">
+                                    <textarea name="Bio" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" placeholder="Tell us about your pet">@Model.Bio</textarea>
+                                    @Html.ValidationMessageFor(m => m.Bio, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <!-- Profile Picture Upload Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Profile Picture</label>
+                                <div class="col-md-10">
+                                    <input type="file" name="ProfilePicture" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" />
+                                    @Html.ValidationMessage("ProfilePicture", "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- Pet Age Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Pet's Age</label>
+                                <div class="col-md-10">
+                                    <input type="number" name="Age" value="@Model.Age" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" placeholder="Enter your pet's age" />
+                                    @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+
+                            <!-- Pet Medical Information Field -->
+                            <div class="py-3">
+                                <label class="font-bold text-gray-700">Medical Information</label>
+                                <div class="col-md-10">
+                                    <textarea name="MedicalInfo" class="rounded-xl border-2 border-bg-indigo-500 w-full p-1" placeholder="Allergies, Medications, etc.">@Model.MedicalInfo</textarea>
+                                    @Html.ValidationMessageFor(m => m.MedicalInfo, "", new { @class = "text-red-600" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center flex-col my-5 space-y-2">
+                        <div class="w-[50%] py-1 bg-blue-500 rounded-xl text-white font-bold text-center m-auto">
+                            <input type="submit" value="Register Pet" class="btn btn-outline-dark" />
+                        </div>
+                    </div>
+                }
+            </section>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

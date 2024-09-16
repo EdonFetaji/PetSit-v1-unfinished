@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSit</title>
+    <link rel="icon" type="image/x-icon" href="../../Favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    @*@Scripts.Render("https://cdn.tailwindcss.com")*@
+
+    @Styles.Render("~/css/main.css")
+    @Styles.Render("~/css/tailwind.css")
+    @* @Styles.Render("~/css/jquery-ui.css") *@
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+<nav class="flex justify-between items-center w-full px-8 py-3  bg-white shadow">
+
+    <div class="flex justify-around flex-1 items-center">
+        <div class="w-[150px]">
+            <img src="~/Content/images/PetSit.png" alt="">
+        </div>
+        <div class="flex justify-between space-x-7 m-auto text-[#372a28] font-bold">
+            <p>@Html.ActionLink("Home", "Index", "Home")</p>
+            <p>@Html.ActionLink("Dashboard", "Dashboard", "Home")</p>
+            <p>@Html.ActionLink("Services", "Index", "PetSitters")</p>
+            <p>@Html.ActionLink("Bookings", "Index", "Bookings")</p>
+            <p>@Html.ActionLink("About us", "About", "Home")</p>
+        </div>
+    </div>
+
+    <div class="flex justify-between space-x-5">
+
+        @if (@User.Identity.IsAuthenticated && Session["user"] != null)
+        {
+            var user = Session["user"] as PetSit.Models.ApplicationUser;
+
+
+            if (Session["user"] != null)
+                    {
+                        <form action="@Url.Action("Logout", "Account")" method="post" class="navbar-form navbar-right">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-outline-danger">Logout</button>
+                        </form>
+                    }
+
+            <div class="flex space-x-3 items-center">
+                <p class="font-bold "> @user.Name </p>
+                <img class="max-w-[30px] rounded-full" src="@user.ProfilePicturePath"/>
+
+            </div>
+        }
+        else
+        {
+            <p>@Html.ActionLink("Log in", "Login", "Account")</p>
+            <p>@Html.ActionLink("Register", "Register", "Account")</p>
+        }
+
+    </div>
+
+</nav>
+
+@* @Html.Partial("_LoginPartial") *@
+
+<div class="w-[92%] m-auto ">
+    @RenderBody()
+</div>
+
+@Scripts.Render("~/Scripts/jquery-3.4.1.js")
+@Scripts.Render("~/Scripts/jquery-ui.js")
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+
+</body>
+</html>
